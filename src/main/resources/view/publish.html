@@ -1,4 +1,39 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery("input[name$='publishTypes']").click(function() {
+        var test = jQuery(this).val();
+
+        jQuery("div.desc").hide();
+        jQuery("#PublishTypes" + test).show();
+    });
+});
+</script>
+
 <div class="form_item_block">
+
+    <div id="publishTypeGroup">
+		<input type="radio" name="publishTypes" value="1" checked="checked">Generic<br>
+		<input type="radio" name="publishTypes" value="2">Ivy<br>
+		<input type="radio" name="publishTypes" value="3">Maven<br>
+		<input type="radio" name="publishTypes" value="4">Gradle
+	
+    	<br> 
+    
+	    <div id="PublishTypes1" class="desc">
+	    	<lable>Generic Section</lable><br> 
+	    </div>
+	     <div id="PublishTypes2" class="desc" style="display: none;">
+	    	<lable>Ivy Section</lable><br> 
+	    </div>
+	     <div id="PublishTypes3" class="desc" style="display: none;">
+	    	<lable>Maven Section</lable><br> 
+	    </div>
+	     <div id="PublishTypes4" class="desc" style="display: none;">
+	    	<lable>Gradle Section</lable><br> 
+	    </div>
+   
+   		<br> 
+    </div>
     <label>Artifactory URI:<span class="asterisk">*</span></label>
     <input type="text" ng-model="URI" />
     <span class="form_error" ng-show="GOINPUTNAME[URI].$error.server">{{ GOINPUTNAME[URI].$error.server }}</span>
