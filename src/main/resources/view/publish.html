@@ -5,9 +5,24 @@ jQuery(document).ready(function() {
 
         jQuery("div.desc").hide();
         jQuery("#PublishTypes" + test).show();
+  
+        }
     });
 });
 </script>
+<head>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script>
+$(document).ready(function(){
+$( "#details" ).dialog({ autoOpen: false });
+$( "#clarity" ).click(function() {
+$( "#details" ).dialog( "open" );
+});
+});
+</script>
+</head>
 
 <div class="form_item_block">
 
@@ -21,7 +36,10 @@ jQuery(document).ready(function() {
 <h4>Artifactory Configuration</h4>
 			    	<label>Artifactory URI:<span class="asterisk">*</span></label>
 				    <input type="text" ng-model="URI" />
-				    <span class="form_error" ng-show="GOINPUTNAME[URI].$error.server">{{ GOINPUTNAME[URI].$error.server }}</span>
+				    <span class="form_error" ng-show="GOINPUTNAME[URI].$error.server">{{ GOINPUTNAME[URI].$error.server }}</span><button id="clarity">?</button>
+<div id="details" title="More about!"><p><font face="Georgia" size="2">
+Please specify the URL for artifactory location storage of package, for example:  https://localhost8153/artifactory. If log in is required then you will be prompted to enter credentials.</font></p></div>
+
 				    <div class="inline_instruction">e.g. repo-key/path/to/artifact (or repo-key/dir if there are multiple artifacts)</div>
 				
 				    <!-- hack to make checkboxes work in Go Angular templates -->
@@ -66,7 +84,10 @@ jQuery(document).ready(function() {
 
 <label>Artifactory URI:<span class="asterisk">*</span></label>
 				    <input type="text" ng-model="URI" />
-				    <span class="form_error" ng-show="GOINPUTNAME[URI].$error.server">{{ GOINPUTNAME[URI].$error.server }}</span>
+				    <span class="form_error" ng-show="GOINPUTNAME[URI].$error.server">{{ GOINPUTNAME[URI].$error.server }}</span><button id="clarity">?</button>
+<div id="details" title="More about!"><p><font face="Georgia" size="2">
+Please specify the URL for artifactory location storage of package, for example:  https://localhost8153/artifactory. If log in is required then you will be prompted to enter credentials.</font></p></div>
+
 				    <div class="inline_instruction">e.g. repo-key/path/to/artifact (or repo-key/dir if there are multiple artifacts)</div>
 
 <input type="checkbox" ng-model="uriIsFolderTmp"
@@ -117,7 +138,10 @@ jQuery(document).ready(function() {
 
 <label>Artifactory URI:<span class="asterisk">*</span></label>
 				    <input type="text" ng-model="URI" />
-				    <span class="form_error" ng-show="GOINPUTNAME[URI].$error.server">{{ GOINPUTNAME[URI].$error.server }}</span>
+				    <span class="form_error" ng-show="GOINPUTNAME[URI].$error.server">{{ GOINPUTNAME[URI].$error.server }}</span><button id="clarity">?</button>
+<div id="details" title="More about!"><p><font face="Georgia" size="2">
+Please specify the URL for artifactory location storage of package, for example:  https://localhost8153/artifactory. If log in is required then you will be prompted to enter credentials.</font></p></div>
+
 				    <div class="inline_instruction">e.g. repo-key/path/to/artifact (or repo-key/dir if there are multiple artifacts)</div>
 				
 				    <!-- hack to make checkboxes work in Go Angular templates -->
@@ -174,7 +198,10 @@ jQuery(document).ready(function() {
 
 <label>Artifactory URI:<span class="asterisk">*</span></label>
 				    <input type="text" ng-model="URI" />
-				    <span class="form_error" ng-show="GOINPUTNAME[URI].$error.server">{{ GOINPUTNAME[URI].$error.server }}</span>
+				    <span class="form_error" ng-show="GOINPUTNAME[URI].$error.server">{{ GOINPUTNAME[URI].$error.server }}</span><button id="clarity">?</button>
+<div id="details" title="More about!"><p><font face="Georgia" size="2">
+Please specify the URL for artifactory location storage of package, for example:  https://localhost8153/artifactory. If log in is required then you will be prompted to enter credentials.</font></p></div>
+
 				    <div class="inline_instruction">e.g. repo-key/path/to/artifact (or repo-key/dir if there are multiple artifacts)</div>
 				
 				    <!-- hack to make checkboxes work in Go Angular templates -->
